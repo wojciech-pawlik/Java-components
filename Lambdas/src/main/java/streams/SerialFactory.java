@@ -26,16 +26,14 @@ public class SerialFactory {
         cNumbers.forEach(System.out::println);
 
         System.out.println("\n===================================================================\n");
-        numbers
-                .stream()
+        numbers.stream()
                 .map(String::toUpperCase)
                 .filter(s -> s.startsWith("B"))
                 .sorted()
                 .forEach(System.out::println);
 
         System.out.println("\n===================================================================\n");
-        numbers
-                .stream()
+        numbers.stream()
                 .filter(s -> s.toUpperCase().startsWith("B"))
                 .sorted()
                 .forEach(System.out::println);
@@ -47,6 +45,7 @@ public class SerialFactory {
         System.out.println(concatStream
                 .distinct()
                 .sorted()
-                .peek(System.out::println));
+                .peek(System.out::println)
+                .count());
     }
 }
